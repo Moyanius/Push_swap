@@ -1,0 +1,14 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/jmoyano-/Desktop/Moyano´s Library'
+printf "Making object 46/47...\r"
+ 
+if [ 46 = 47 ]; then echo ""; fi
+gcc -Wall -Wextra -Werror -I . -c src/ft_gnl/get_next_line_c.c -o obj/ft_gnl/get_next_line_c.o
+ 
+printf "Making object 47/47...\r"
+if [ 47 = 47 ]; then echo ""; fi
+gcc -Wall -Wextra -Werror -I . -c src/ft_gnl/get_next_line_utils.c -o obj/ft_gnl/get_next_line_utils.o
+echo "Compiling library..."
+ar crs libft.a obj/ft_is/ft_isalnum.o obj/ft_is/ft_isalpha.o obj/ft_is/ft_isascii.o obj/ft_is/ft_isdigit.o obj/ft_is/ft_isprint.o obj/ft_lst/ft_lstadd_back.o obj/ft_lst/ft_lstadd_front.o obj/ft_lst/ft_lstclear.o obj/ft_lst/ft_lstdelone.o obj/ft_lst/ft_lstiter.o obj/ft_lst/ft_lstlast.o obj/ft_lst/ft_lstmap.o obj/ft_lst/ft_lstnew.o obj/ft_lst/ft_lstsize.o obj/ft_mem/ft_bzero.o obj/ft_mem/ft_calloc.o obj/ft_mem/ft_memchr.o obj/ft_mem/ft_memcpy.o obj/ft_mem/ft_memcmp.o obj/ft_mem/ft_memmove.o obj/ft_mem/ft_memset.o obj/ft_put/ft_putchar_fd.o obj/ft_put/ft_putendl_fd.o obj/ft_put/ft_putnbr_fd.o obj/ft_put/ft_putstr_fd.o obj/ft_str/ft_split.o obj/ft_str/ft_strchr.o obj/ft_str/ft_strdup.o obj/ft_str/ft_striteri.o obj/ft_str/ft_strjoin.o obj/ft_str/ft_strlcat.o obj/ft_str/ft_strlcpy.o obj/ft_str/ft_strlen.o obj/ft_str/ft_strmapi.o obj/ft_str/ft_strncmp.o obj/ft_str/ft_strnstr.o obj/ft_str/ft_strrchr.o obj/ft_str/ft_strtrim.o obj/ft_str/ft_substr.o obj/ft_to/ft_atoi.o obj/ft_to/ft_itoa.o obj/ft_to/ft_tolower.o obj/ft_to/ft_toupper.o obj/ft_printf/ft_printf.o obj/ft_printf/ft_printf_utils.o obj/ft_gnl/get_next_line_c.o obj/ft_gnl/get_next_line_utils.o
+make: Leaving directory `/Users/jmoyano-/Desktop/Moyano´s Library'
+ 
