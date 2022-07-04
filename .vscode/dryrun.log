@@ -1,8 +1,9 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/System/Volumes/Data/sgoinfre/goinfre/Perso/jmoyano-/Push Swap'
 make -C ./Moyano_library
 cp Moyano_library/push_swap.a push_swap.a
 gcc -Wall -Wextra -Werror -c ft_printf.c ft_printf_utils.c -I./
+ 
 ar rcs push_swap.a ft_printf.o ft_printf_utils.o
 make: Leaving directory `/System/Volumes/Data/sgoinfre/goinfre/Perso/jmoyano-/Push Swap'
  
