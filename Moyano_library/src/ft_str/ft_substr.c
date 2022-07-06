@@ -6,11 +6,11 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:34:51 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/05/03 18:03:57 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:25:18 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

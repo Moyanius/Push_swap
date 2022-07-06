@@ -6,11 +6,11 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 12:10:26 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/05/09 16:36:25 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:25:18 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

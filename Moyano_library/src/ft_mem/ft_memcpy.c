@@ -6,11 +6,11 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 17:17:10 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/04/26 12:26:18 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:25:18 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

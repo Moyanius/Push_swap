@@ -6,11 +6,11 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 11:33:59 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/05/09 16:23:14 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:25:18 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 static size_t	ft_wordcount(char *s, char c)
 {

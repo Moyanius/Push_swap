@@ -6,11 +6,11 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 15:11:35 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/05/06 15:22:19 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:25:18 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

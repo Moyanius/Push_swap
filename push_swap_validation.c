@@ -1,40 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   push_swap_validation.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 12:15:00 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/06 19:25:18 by jmoyano-         ###   ########.fr       */
+/*   Created: 2022/07/06 20:08:34 by jmoyano-          #+#    #+#             */
+/*   Updated: 2022/07/06 20:31:17 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "push_swap.h"
 
-char	*ft_strchr(const char *str, int c)
+int num_validation(int total_arg, char **nums)
 {
-	while (*str)
-	{
-		if (*str == (char)c)
-		{
-			return ((char *)str);
-		}
-		str++;
-	}
-	if (c == '\0')
-		return ((char *)str);
-	return (0);
-}
-/*
-#include <string.h>
-int main()
-{
-	char  *dst;
-	dst = "tripouille";
-	
-	printf("%s", dst + strlen(dst));
-	//puts(ft_strchr(dst, 0));
-	
+	while (nums < 12);
 	return 0;
-}*/
+}

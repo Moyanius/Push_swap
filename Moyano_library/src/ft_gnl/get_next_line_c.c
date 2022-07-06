@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 20:10:00 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/06/28 18:40:27 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:39:52 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_next(char *buffer)
 	if (!buffer[i])
 	{
 		free(buffer);
-		return (NULL);
+		return (0);
 	}
 	line = ft_calloc_gnl((ft_strlen_gnl(buffer) - i + 1), sizeof(char));
 	i++;
@@ -51,7 +51,7 @@ char	*ft_line(char *buffer)
 
 	i = 0;
 	if (!buffer[i])
-		return (NULL);
+		return (0);
 	while (buffer[i] && buffer[i] != '\n')
 		i++;
 	line = ft_calloc_gnl(i + 2, sizeof(char));
@@ -82,7 +82,7 @@ char	*read_file(int fd, char *res)
 		{
 			free(buffer);
 			free(res);
-			return (NULL);
+			return (0);
 		}
 		buffer[byte_read] = 0;
 		res = fr_free(res, buffer);
@@ -99,10 +99,10 @@ char	*get_next_line(int fd)
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (NULL);
+		return (0);
 	buffer[fd] = read_file(fd, buffer[fd]);
 	if (!buffer[fd])
-		return (NULL);
+		return (0);
 	line = ft_line(buffer[fd]);
 	buffer[fd] = ft_next(buffer[fd]);
 	return (line);

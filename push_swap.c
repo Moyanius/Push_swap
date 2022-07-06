@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 18:59:13 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/04 18:38:28 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/06 20:22:51 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int push_swap(int total_arg, char **nums)
 		{
 			printf("%s\n", nums[i]);
 			i++;
+			num_validation(total_arg, nums);
 		}
 	return 0;
 }
+

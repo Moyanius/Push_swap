@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 20:14:40 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/06/28 18:40:56 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/06 19:39:50 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin_gnl(char const *s1, char const *s2)
 	sizetotal = ft_strlen_gnl(s1) + ft_strlen_gnl(s2);
 	res = malloc(sizeof(char) * (sizetotal + 1));
 	if (!res || !s1 || !s2)
-		return (NULL);
+		return (0);
 	while (s1[i] != 0)
 	{
 		res[i] = s1[i];
@@ -50,7 +50,7 @@ char	*ft_strchr_gnl(const char *string, int searchedChar )
 	if (*str == searchedChar)
 		return (str);
 	else
-		return (NULL);
+		return (0);
 }
 
 void	ft_bzero_gnl(void *s, size_t n)
@@ -74,10 +74,10 @@ void	*ft_calloc_gnl(size_t count, size_t size)
 	result = 0;
 	if ((count == __SIZE_MAX__ && size > 1)
 		|| (size == __SIZE_MAX__ && count > 1))
-		return (NULL);
+		return (0);
 	result = malloc(count * size);
 	if (!result)
-		return (NULL);
+		return (0);
 	ft_bzero_gnl(result, (count * size));
 	return (result);
 }
