@@ -6,7 +6,7 @@
 #    By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 19:34:39 by jmoyano-          #+#    #+#              #
-#    Updated: 2022/07/06 20:25:24 by jmoyano-         ###   ########.fr        #
+#    Updated: 2022/07/11 18:04:41 by jmoyano-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ CFLAGS  = -Werror -Wall -Wextra
 
 SRCS	=	push_swap.c \
 			main_push_swap.c \
-			push_swap_validation.c 
+			push_swap_validation.c \
+			push_swap_utils.c \
+			push_swap_errors.c 
 
 
 

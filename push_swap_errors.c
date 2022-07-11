@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   push_swap_errors.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/20 16:54:19 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/11 17:24:24 by jmoyano-         ###   ########.fr       */
+/*   Created: 2022/07/11 17:54:39 by jmoyano-          #+#    #+#             */
+/*   Updated: 2022/07/11 18:09:27 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "push_swap.h"
 
-int	ft_isdigit(int c)
+void push_swap_errors(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c == 1)
 	{
-		return (1);
+		printf("Has introducido un caracter no numero%s");
+		exit(1);	
 	}
-	return (0);
 }
-/*
-int main(void)
-{
-    printf("%d", ft_isdigit('a'));
-}*/

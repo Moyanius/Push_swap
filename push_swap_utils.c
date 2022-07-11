@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 15:39:21 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/07 17:13:50 by jmoyano-         ###   ########.fr       */
+/*   Created: 2022/07/11 17:24:52 by jmoyano-          #+#    #+#             */
+/*   Updated: 2022/07/11 17:49:22 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "push_swap.h"
+
+int	ft_isdigit_pushswap(int c)
+{
+	if (c >= -2147483648 && c <= 2147483647)
+	{
+		return (1);
+	}
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -36,11 +45,5 @@ int	ft_atoi(const char *str)
 		result += str[i++] - '0';
 	}
 	result *= sign;
-	return (result);
+	return (ft_isdigit_pushswap(result));
 }
-/*
-int		main(void)
-{
-	printf("%d\n", ft_atoi("123 a 4 f 7 89"));
-	return (0);
-}*/
