@@ -6,19 +6,24 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 17:24:52 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/11 17:49:22 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/11 18:25:45 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_isdigit_pushswap(int c)
+int	ft_isdigit_pushswap(char *str)
 {
-	if (c >= -2147483648 && c <= 2147483647)
+	int		i;
+
+	i = 0;
+	while (str[i])
 	{
-		return (1);
+		if (str[i] != '-' && (str[i] < '0' || str[i] > '9'))
+			return (0);
+		i++;
 	}
-	return (0);
+	return (1);
 }
 
 int	ft_atoi(const char *str)
@@ -45,5 +50,5 @@ int	ft_atoi(const char *str)
 		result += str[i++] - '0';
 	}
 	result *= sign;
-	return (ft_isdigit_pushswap(result));
+	return (result);
 }

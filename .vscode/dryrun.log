@@ -1,7 +1,8 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/System/Volumes/Data/sgoinfre/goinfre/Perso/jmoyano-/Push Swap'
+gcc -Werror -Wall -Wextra   -c -o push_swap.o push_swap.c
+gcc -Werror -Wall -Wextra   -c -o main_push_swap.o main_push_swap.c
 gcc -Werror -Wall -Wextra   -c -o push_swap_validation.o push_swap_validation.c
- 
 gcc -Werror -Wall -Wextra   -c -o push_swap_utils.o push_swap_utils.c
 gcc -Werror -Wall -Wextra   -c -o push_swap_errors.o push_swap_errors.c
 make -C ./Moyano_library

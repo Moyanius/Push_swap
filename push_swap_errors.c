@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 17:54:39 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/11 18:09:27 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/11 18:20:28 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void push_swap_errors(int c)
 {
 	if (c == 1)
 	{
-		printf("Has introducido un caracter no numero%s");
+		printf("Has introducido un caracter no numerico");
 		exit(1);	
 	}
 }

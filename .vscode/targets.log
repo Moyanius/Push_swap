@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Mon Jul 11 18:04:53 2022
+# Make data base, printed on Mon Jul 11 18:13:51 2022
 
 # Variables
 
@@ -161,9 +161,9 @@ VSCODE_PID = 18825
 
 # Directories
 
-# . (device 436207637, inode 40665201): 16 files, no impossibilities.
+# . (device 436207637, inode 40665201): 18 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -188,8 +188,9 @@ all: push_swap
 # Not a target:
 push_swap_validation.o:
 #  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
+#  Last modified 2022-07-11 18:11:29
+#  File has been updated.
+#  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -210,9 +211,12 @@ Makefile:
 
 # Not a target:
 push_swap_utils.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-11 18:11:29
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
@@ -227,7 +231,7 @@ fclean: clean
 # Not a target:
 main_push_swap.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 17:17:22
+#  Last modified 2022-07-11 18:11:29
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -258,7 +262,7 @@ clean:
 # Not a target:
 push_swap.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 17:17:22
+#  Last modified 2022-07-11 18:11:29
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -277,9 +281,11 @@ push_swap: push_swap.o main_push_swap.o push_swap_validation.o push_swap_utils.o
 
 # Not a target:
 push_swap_errors.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
+#  Implicit rule search has been done.
+#  File does not exist.
 #  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
 # Load=14/1024=1%, Rehash=0, Collisions=0/40=0%
@@ -294,8 +300,8 @@ push_swap_errors.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Jul 11 18:04:53 2022
+# Finished Make data base on Mon Jul 11 18:13:51 2022
 
  
-make: *** No rule to make target `push_swap_validation.o', needed by `push_swap'.  Stop.
+make: *** No rule to make target `push_swap_errors.o', needed by `push_swap'.  Stop.
 
