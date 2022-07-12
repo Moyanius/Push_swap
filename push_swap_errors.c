@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 17:54:39 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/11 18:20:28 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/12 17:57:07 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,10 @@ void push_swap_errors(int c)
 	{
 		printf("Has introducido un caracter no numerico");
 		exit(1);	
+	}
+	if (c == 2)
+	{
+		printf("Has introducido dos numeros iguales");
+		exit(2);
 	}
 }
