@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 20:12:28 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/12 19:20:56 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/13 18:44:53 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,25 @@
 # include <stdlib.h>	
 # include <string.h>
 # include <strings.h>
+# include <stddef.h>
+# include <ctype.h>
 # include "./Moyano_library/libft.h"
 
-typedef struct s_list34 {
+typedef struct s_listpush {
 	int value;
-	struct node* next;
-} t_list34;
+	struct s_listpush *next;
+	struct s_listpush *previous;
+} t_listpush;
 
-int		push_swap(int total_arg, char **nums);
-int		main(int agrc , char **agrv);
-void	num_validation(int total_arg, char **nums);
-int		ft_isdigit_pushswap(char *str);
-int		ft_atoi(const char *str);
-void	push_swap_errors(int c);
-void	duplicate_validation(char **nums);
+int			push_swap(int total_arg, char **nums);
+int			main(int agrc , char **agrv);
+void		num_validation(int total_arg, char **nums);
+int			ft_isdigit_pushswap(char *str);
+int			ft_atoi(const char *str);
+void		push_swap_errors(int c);
+void		duplicate_validation(char **nums);
+int			insert_node_first(t_listpush **head, int value);
+t_listpush	*create_node(int value);
+
 
 #endif
