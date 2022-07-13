@@ -12,19 +12,17 @@
 
 #include "push_swap.h"
 
-int push_swap(int total_arg, char **nums)
+int push_swap(int total_arg, char **nums,  t_listpush **head)
 {
 	int i;
 
 	i = 1;
 	num_validation(total_arg, nums);
 	duplicate_validation(nums);
+	insert_node_first(head, atoi(nums[1]));
 
-	while (i < total_arg)
-	{
-		printf("%s\n", nums[i]);
-		i++;
-	}
+	print_list(*head);
+	
 	return 0;
 }
 

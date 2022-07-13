@@ -29,15 +29,16 @@ typedef struct s_listpush {
 	struct s_listpush *previous;
 } t_listpush;
 
-int			push_swap(int total_arg, char **nums);
+int			push_swap(int total_arg, char **nums,  t_listpush **head);
 int			main(int agrc , char **agrv);
 void		num_validation(int total_arg, char **nums);
 int			ft_isdigit_pushswap(char *str);
 int			ft_atoi(const char *str);
 void		push_swap_errors(int c);
 void		duplicate_validation(char **nums);
-int			insert_node_first(t_listpush **head, int value);
-t_listpush	*create_node(int value);
+int			insert_node_first(t_listpush **head, int argv);
+t_listpush	*create_node(int nums);
+void		print_list(t_listpush *head);
 
 
 #endif

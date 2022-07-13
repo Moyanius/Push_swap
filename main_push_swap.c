@@ -14,6 +14,20 @@
 
 int main(int argc , char **argv)
 {
-	push_swap(argc, argv);
+	t_listpush *head;
+
+	push_swap(argc, argv, &head);
 	return 0;
+}
+
+void print_list(t_listpush *head)
+{
+	t_listpush *tmp;
+
+	tmp = head;
+	while (tmp->next)
+	{
+	printf("%d\n", tmp->value);
+		tmp = tmp->next;
+	}
 }

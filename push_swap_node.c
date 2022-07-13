@@ -12,11 +12,11 @@
 
 #include "push_swap.h"
 
-int insert_node_first(t_listpush **head, int value)
+int insert_node_first(t_listpush **head, int argv)
 {
 	t_listpush *new;
 
-	new = create_node(value);
+	new = create_node(argv);
 	if (!new)
 	{
 		new->next = *head;
@@ -29,14 +29,14 @@ int insert_node_first(t_listpush **head, int value)
 	return (0);
 }
 
-t_listpush *create_node(int value)
+t_listpush *create_node(int nums)
 {
 	t_listpush *new;
 
 	new = (t_listpush*) malloc(sizeof (t_listpush));
 	if(!new)
 	{
-		new->value = value;
+		new->value = nums;
 		new->next = NULL;
 		new->previous = NULL;
 	}
