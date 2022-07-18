@@ -16,8 +16,10 @@ int main(int argc , char **argv)
 {
 	t_listpush *head;
 
-	push_swap(argc, argv, &head);
-	return 0;
+	head = NULL;
+
+	push_swap(argc - 1, argv, &head);
+	return (0);
 }
 
 void print_list(t_listpush *head)

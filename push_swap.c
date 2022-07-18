@@ -16,11 +16,14 @@ int push_swap(int total_arg, char **nums,  t_listpush **head)
 {
 	int i;
 
-	i = 1;
+	i = 0;
 	num_validation(total_arg, nums);
 	duplicate_validation(nums);
-	insert_node_first(head, atoi(nums[1]));
-
+	while(total_arg > i)
+	{
+		insert_node_first(head, atoi(nums[i]));
+		i++;
+	}
 	print_list(*head);
 	
 	return 0;

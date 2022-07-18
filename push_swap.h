@@ -39,6 +39,7 @@ void		duplicate_validation(char **nums);
 int			insert_node_first(t_listpush **head, int argv);
 t_listpush	*create_node(int nums);
 void		print_list(t_listpush *head);
+int			insert_node_final(t_listpush **head, int value);
 
 
 #endif
