@@ -6,26 +6,55 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 18:59:13 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/12 18:04:39 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/19 18:23:00 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int push_swap(int total_arg, char **nums,  t_listpush **head)
+int push_swap(int total_arg, char **nums,  t_listpush **head, t_listpush **a, t_listpush **b)
 {
 	int i;
 
-	i = 0;
+	(void)head;
+	i = total_arg;
 	num_validation(total_arg, nums);
 	duplicate_validation(nums);
-	while(total_arg > i)
+	while(i > 1)
 	{
-		insert_node_first(head, atoi(nums[i]));
-		i++;
+		insert_node(a, atoi(nums[i - 1]));
+		i--;
 	}
-	print_list(*head);
+	
+	
+	printlist(*a, *b);
 	
 	return 0;
 }
 
+void    printlist(t_listpush *list_a, t_listpush *list_b)
+{
+    int a;
+    int b;
+    while (list_a || list_b)
+    {
+        if (list_a)
+        {
+            if (list_a)
+                a = list_a->value;
+            list_a = list_a->next;
+        }
+        else
+            a = 0;
+        if (list_b)
+        {
+            if (list_b)
+                b = list_b->value;
+            list_b = list_b->next;
+        }
+        else
+            b = 0;
+        printf(" %d     %d \n", a, b);
+    }
+    printf("---------\n A     B \n\n");
+}

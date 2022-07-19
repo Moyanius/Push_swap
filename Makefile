@@ -6,7 +6,7 @@
 #    By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 19:34:39 by jmoyano-          #+#    #+#              #
-#    Updated: 2022/07/13 18:29:57 by jmoyano-         ###   ########.fr        #
+#    Updated: 2022/07/19 17:35:04 by jmoyano-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS	=	push_swap.c \
 			push_swap_validation.c \
 			push_swap_utils.c \
 			push_swap_node.c \
+			push_swap_order.c \
 			push_swap_errors.c 
 
 
