@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:05:22 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/19 18:21:23 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/20 19:51:01 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,25 @@ int insert_node_final(t_listpush **head, int value)
 				return (1);
 			}
 		
+	}
+	return (0);
+}
+
+int insert_node_first(t_listpush **head, int value)
+{
+	t_listpush *new;
+
+	new = NULL;
+	
+	new = create_node(value);
+	if (new != NULL)
+	{
+		new->next = *head;
+		new->previous = NULL;
+		if(*head == NULL)
+			(*head)->previous = new;
+		*head = new;
+		return (1);
 	}
 	return (0);
 }
@@ -58,6 +77,7 @@ t_listpush *create_node(int nums)
 
 	new = NULL;
 	new = (t_listpush*) malloc(sizeof (t_listpush));
+	
 	if(new != NULL)
 	{
 		new->value = nums;

@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 20:12:28 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/19 18:59:18 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/20 19:40:46 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,10 @@ int			insert_node(t_listpush **a, int argv);
 t_listpush	*create_node(int nums);
 int			insert_node_final(t_listpush **head, int value);
 void		printlist(t_listpush *list_a, t_listpush *list_b);
-void			sa(t_listpush **a);
+void		swap(t_listpush **a);
+void		rotate(t_listpush **a);
+void		reverse_rotate(t_listpush **a);
+int			insert_node_first(t_listpush **head, int value);
 
 
 #endif
