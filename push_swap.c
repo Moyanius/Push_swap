@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 18:59:13 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/20 19:09:31 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:46:11 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int push_swap(int total_arg, char **nums,  t_listpush **head, t_listpush **a, t_
 	
 	
 	printlist(*a, *b);
-    reverse_rotate(a);
+    //reverse_rotate(a);
     printlist(*a, *b);
 	
 	return 0;
