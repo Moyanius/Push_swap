@@ -5,17 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/27 19:03:22 by jmoyano-           #+#    #+#             */
-/*   Updated: 2022/07/06 18:23:40 by jmoyano-         ###   ########.fr       */
+/*   Created: 2022/06/27 19:03:22 by jmoyano-          #+#    #+#             */
+/*   Updated: 2022/07/25 18:25:12 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <ctype.h>
+# include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
@@ -28,7 +27,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}					t_list;
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -72,11 +71,11 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 
+int					ft_printf(const char *str, ...);
 
-int		ft_printf(const char *str, ...);
-
-char	*get_next_line(int fd);
+char				*get_next_line(int fd);
 
 #endif
