@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_order_swap.c                             :+:      :+:    :+:   */
+/*   push_swap_order_rotate.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 17:11:33 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/26 19:46:06 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:46:24 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_listpush **a)
+void	rotate(t_listpush **a)
 {
-	int	temp;
+	int			value_temp;
+	t_listpush	*temp;
 
-	if ((*a) && (*a)->next)
-	{
-		temp = (*a)->value;
-		(*a)->value = (*a)->next->value;
-		(*a)->next->value = temp;
-	}
+	value_temp = (*a)->value;
+	temp = (*a)->next;
+	insert_node_final(&temp, value_temp);
+	(*a) = temp;
 }
 
-void	sa(t_listpush **list_a)
+void	ra(t_listpush **list_a)
 {
-	swap(list_a);
-	printf("SA\n");
+	rotate(list_a);
+	printf("RA\n");
 }
 
-void	sb(t_listpush **list_b)
+void	rb(t_listpush **list_b)
 {
-	swap(list_b);
-	printf("SB\n");
+	rotate(list_b);
+	printf("RB\n");
 }
 
-void	ss(t_listpush **list_a, t_listpush **list_b)
+void	rr(t_listpush **list_a, t_listpush **list_b)
 {
-	swap(list_a);
-	swap(list_b);
-	printf("SS\n");
+	rotate(list_a);
+	rotate(list_b);
+	printf("RR\n");
 }

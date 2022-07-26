@@ -1,44 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_order_swap.c                             :+:      :+:    :+:   */
+/*   push_swap_order_reverse_rotate.c                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 17:11:33 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/26 19:46:06 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:47:34 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_listpush **a)
+void	reverse_rotate(t_listpush **a)
 {
-	int	temp;
+	t_listpush	*temp;
+	t_listpush	*temp2;
 
-	if ((*a) && (*a)->next)
-	{
-		temp = (*a)->value;
-		(*a)->value = (*a)->next->value;
-		(*a)->next->value = temp;
-	}
+	temp = (*a);
+	while (temp->next->next != NULL)
+		temp = temp->next;
+	temp2 = temp->next;
+	temp2->next = (*a);
+	(*a) = temp2;
+	temp->next = NULL;
 }
 
-void	sa(t_listpush **list_a)
+void	rra(t_listpush **list_a)
 {
-	swap(list_a);
-	printf("SA\n");
+	reverse_rotate(list_a);
+	printf("RRA\n");
 }
 
-void	sb(t_listpush **list_b)
+void	rrb(t_listpush **list_b)
 {
-	swap(list_b);
-	printf("SB\n");
+	reverse_rotate(list_b);
+	printf("RRB\n");
 }
 
-void	ss(t_listpush **list_a, t_listpush **list_b)
+void	rrr(t_listpush **list_a, t_listpush **list_b)
 {
-	swap(list_a);
-	swap(list_b);
-	printf("SS\n");
+	reverse_rotate(list_a);
+	reverse_rotate(list_b);
+	printf("RRR\n");
 }

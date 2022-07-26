@@ -6,18 +6,16 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 18:59:13 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/25 19:17:23 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:45:04 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	push_swap(int total_arg, char **nums, t_listpush **head, t_listpush **a,
-		t_listpush **b)
+int	push_swap(int total_arg, char **nums, t_listpush **a, t_listpush **b)
 {
 	int	i;
 
-	(void)head;
 	i = total_arg;
 	num_validation(total_arg, nums);
 	duplicate_validation(nums);
