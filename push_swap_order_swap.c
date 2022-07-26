@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_order.c                                  :+:      :+:    :+:   */
+/*   push_swap_order_swap.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 17:11:33 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/25 18:08:06 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:16:18 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,24 @@ void	swap(t_listpush **a)
 		(*a)->value = (*a)->next->value;
 		(*a)->next->value = temp;
 	}
+}
+
+void sa(t_listpush **list_a)
+{
+	swap(list_a);
+	printf("SA");
+}
+
+void sb(t_listpush **list_b)
+{
+	swap(list_b);
+	printf("SB");
+}
+void ss(t_listpush **list_a, t_listpush **list_b)
+{
+	swap(list_a);
+	swap(list_b);
+	printf("SS");
 }
 
 void	rotate(t_listpush **a)

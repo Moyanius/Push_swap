@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 20:12:28 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/25 19:04:46 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:16:23 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,8 @@ void					rotate(t_listpush **a);
 void					reverse_rotate(t_listpush **a);
 int						insert_node_first(t_listpush **head, int value);
 void					order_three(t_listpush **a);
+void					sa(t_listpush **list_a);
+void					sb(t_listpush **list_b);
+void					ss(t_listpush **list_a, t_listpush **list_b);
 
 #endif
