@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 17:54:39 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/25 18:07:45 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/27 17:22:45 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,10 @@ void	push_swap_errors(int c)
 	{
 		printf("Has introducido dos numeros iguales");
 		exit(2);
+	}
+	if (c == 3)
+	{
+		printf("has introducido un entero fuera de su rango mínimo o máximo");
+		exit(3);
 	}
 }

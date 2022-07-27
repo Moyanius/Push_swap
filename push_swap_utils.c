@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 17:24:52 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/25 18:26:08 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/27 17:57:56 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_isdigit_pushswap(char *str)
 	return (1);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi_pushswap(const char *str)
 {
 	int	sign;
 	int	result;
@@ -49,5 +49,7 @@ int	ft_atoi(const char *str)
 		result += str[i++] - '0';
 	}
 	result *= sign;
+	if ((result > 0 && sign < 0) || (result < 0 && sign > 0))
+		push_swap_errors(3);
 	return (result);
 }

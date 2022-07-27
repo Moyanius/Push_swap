@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 20:08:34 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/25 18:06:21 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/27 17:58:12 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	duplicate_validation(char **nums)
 		i = j + 1;
 		while (nums[i])
 		{
-			if (ft_atoi(nums[j]) == ft_atoi(nums[i]))
+			if (ft_atoi_pushswap(nums[j]) == ft_atoi_pushswap(nums[i]))
 				push_swap_errors(2);
 			i++;
 		}

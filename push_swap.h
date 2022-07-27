@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 20:12:28 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/26 20:30:43 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/07/27 17:58:22 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int			push_swap(int total_arg, char **nums,
 int			main(int agrc, char **agrv);
 void		num_validation(int total_arg, char **nums);
 int			ft_isdigit_pushswap(char *str);
-int			ft_atoi(const char *str);
+long		ft_atoi_pushswap(const char *str);
 void		push_swap_errors(int c);
 void		duplicate_validation(char **nums);
 int			insert_node(t_listpush **a, int argv);
