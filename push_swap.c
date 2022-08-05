@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 18:59:13 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/27 20:05:55 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/08/05 12:44:25 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,5 @@ void	printlist(t_listpush *list_a, t_listpush *list_b)
 		printf(" %d     %d \n", a, b);
 	}
 	printf("---------\n A     B \n\n");
+	///printf("%d", ft_atoi("123"));
 }
