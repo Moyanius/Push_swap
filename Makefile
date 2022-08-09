@@ -6,7 +6,7 @@
 #    By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 19:34:39 by jmoyano-          #+#    #+#              #
-#    Updated: 2022/07/27 19:32:54 by jmoyano-         ###   ########.fr        #
+#    Updated: 2022/08/08 11:01:23 by jmoyano-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,7 @@ OBJS		=	${SRCS:.c=.o}
 
 $(NAME): $(OBJS)
 	make -C ./Moyano_library
-	${CC} ${CFLAGS} $(OBJS) -I./ -o ${NAME}
-
+	${CC} ${CFLAGS} $(OBJS) -I ./Moyano_library -L ./Moyano_library -l ft -o ${NAME}
 	
 all: $(NAME)
 
