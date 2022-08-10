@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 17:24:52 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/08/09 13:27:01 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/08/10 12:34:37 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,49 @@ int min_order_five(t_listpush **a)
 	list_a = *a;
 	
 	i = list_a->value;
-	
-	while (list_a->next)
-		{
-			if(list_a->value < i)
-				i = list_a->value;
-			list_a = list_a->next;
-		}
+	while (list_a)
+	{
+		if(list_a->value < i)
+			i = list_a->value;
+		list_a = list_a->next;
+	}
 	return (i);	
+}
+
+void    smart_selector(t_listpush **a, int min)
+{
+    int i;
+    int num;
+    i = search_base((*a), min, 1);
+    num = lst_len(*a);
+    if (num > i)
+        ra(a);
+    else
+        rra(a);
+}
+
+int search_base(t_listpush *stk, int num, int option)
+{
+    int i;
+    i = 1;
+    if (option == 1)
+    {
+        while (stk)
+        {
+            if (stk->value <= num)
+                return (i);
+            stk = stk->next;
+        }
+    }
+    if (option == 2)
+    {
+        while (stk)
+        {
+            if (stk->value >= num)
+                return (i);
+            stk = stk->next;
+            i++;
+        }
+    }
+    return (-1);
 }

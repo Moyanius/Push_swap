@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 18:59:13 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/08/09 13:30:15 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/08/10 11:35:11 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	push_swap(int total_arg, char **nums, t_listpush **a, t_listpush **b)
 	}
 
 	printlist(*a, *b);
-	order_five(a, b, total_arg);
+	order_five(a, b);
 	printlist(*a, *b);
 	return (0);
 }
