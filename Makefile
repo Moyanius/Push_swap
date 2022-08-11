@@ -6,7 +6,7 @@
 #    By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 19:34:39 by jmoyano-          #+#    #+#              #
-#    Updated: 2022/08/11 11:05:59 by jmoyano-         ###   ########.fr        #
+#    Updated: 2022/08/11 12:26:29 by jmoyano-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRCS	=	push_swap.c \
 			push_swap_order_reverse_rotate.c \
 			push_swap_order_three.c \
 			push_swap_order_five.c \
+			push_swap_order_radix.c \
 			push_swap_errors.c 
 
 
