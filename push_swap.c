@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 18:59:13 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/08/12 12:53:40 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/08/17 19:49:48 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,23 @@ int	push_swap(int total_arg, char **nums, t_listpush **a, t_listpush **b)
 	i = total_arg;
 	num_validation(total_arg, nums);
 	duplicate_validation(nums);
+	int_validation(total_arg, nums);
 	while (i > 1)
 	{
 		insert_node(a, atoi(nums[i - 1]));
 		i--;
 	}
-	printlist(*a, *b);
-	order_radix(a, b, lst_len(*a), 0);
-	printlist(*a, *b);
+	index_stack(a);
+	//printlist(*a, *b);
+	if (lst_len(*a) == 2)
+		order_two(a);
+	else if(lst_len(*a) == 3)
+		order_three(a);
+	else if(lst_len(*a) == 5)
+		order_five(a, b);
+	else
+		radix_sort(a, b);
+	//printlist(*a, *b);
 	return (0);
 }
 

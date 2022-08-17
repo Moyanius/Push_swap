@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 10:54:28 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/08/11 12:59:27 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/08/17 17:19:02 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,35 @@ int	order_check(t_listpush *a, t_listpush *b, char c)
 		b = b->next;
 	}
 	return (count);
+}
+
+int redond_up(float flt)
+{
+	int a;
+	a = (int)flt;
+	
+	if((a - flt) >= 0.5)
+		a++;	
+	return (a);
+}
+
+t_listpush	*ft_lst_dup(t_listpush *list)
+{
+	t_listpush	*tmp1;
+	t_listpush	*tmp2;
+
+	tmp1 = ft_calloc(1, sizeof(t_listpush));
+	tmp2 = tmp1;
+	while (list)
+	{
+		tmp1->value = list->value;
+		if (list->next)
+		{
+			tmp1->next = calloc(1, sizeof(t_listpush));
+			tmp1 = tmp1->next;
+		}
+		list = list->next;
+	}
+	tmp1 = tmp2;
+	return (tmp1);
 }

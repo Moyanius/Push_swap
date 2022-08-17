@@ -6,49 +6,34 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:05:22 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/07/25 18:28:39 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/08/17 20:58:43 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	insert_node_final(t_listpush **head, int value)
+void	insert_node_final(t_listpush **head)
 {
-	t_listpush	*new;
-	t_listpush	*tmp;
+	t_listpush	*tmp1;
+	t_listpush	*tmp2;
 
-	new = NULL;
-	tmp = *head;
-	new = create_node(value);
-	if (new != NULL)
-	{
-		while (tmp->next != NULL)
-			(tmp = tmp->next);
-		{
-			new->previous = tmp;
-			tmp->next = new;
-			return (1);
-		}
-	}
-	return (0);
+	tmp1 = NULL;
+	tmp1 = *head;
+	tmp2 = (*head)->previous;
+	while(tmp1->next)
+		tmp1 = tmp1->next;
+	tmp1->next = tmp2;
+	tmp1->next->previous = tmp1;
+	tmp1->next->next = NULL;
 }
 
-int	insert_node_first(t_listpush **head, int value)
+void	insert_node_first(t_listpush **head, t_listpush *new)
 {
-	t_listpush	*new;
-
-	new = NULL;
-	new = create_node(value);
-	if (new != NULL)
-	{
-		new->next = *head;
-		new->previous = NULL;
-		if (*head == NULL)
-			(*head)->previous = new;
-		*head = new;
-		return (1);
-	}
-	return (0);
+	new->next = (*head);
+	new->previous = NULL;
+	if((*head) != NULL)
+		(*head)->previous = new;
+	(*head) = new;
 }
 
 int	insert_node(t_listpush **a, int argv)
@@ -56,7 +41,7 @@ int	insert_node(t_listpush **a, int argv)
 	t_listpush	*new;
 
 	new = NULL;
-	new = create_node(argv);
+	new = create_node(argv, -1);
 	if (new != NULL)
 	{
 		new->next = *a;
@@ -69,7 +54,7 @@ int	insert_node(t_listpush **a, int argv)
 	return (0);
 }
 
-t_listpush	*create_node(int nums)
+t_listpush	*create_node(int nums, int index)
 {
 	t_listpush	*new;
 
@@ -78,6 +63,7 @@ t_listpush	*create_node(int nums)
 	if (new != NULL)
 	{
 		new->value = nums;
+		new->index = index;
 		new->next = NULL;
 		new->previous = NULL;
 	}

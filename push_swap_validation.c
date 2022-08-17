@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 20:08:34 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/08/11 12:10:27 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/08/17 18:59:09 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	int_validation(int total_arg, char **nums)
 	i = 1;
 	while (i < total_arg)
 	{
-		if (atol(nums[i]) >= INT_MIN && atol(nums[i]) <= INT_MAX)
+		if (!(ft_atol(nums[i]) >= INT_MIN && ft_atol(nums[i]) <= INT_MAX))
 			push_swap_errors(3);
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 17:11:33 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/08/11 12:10:14 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/08/17 20:21:10 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	pa(t_listpush **b, t_listpush **a)
 {
 	p_stk(b, a);
-	printf("PA\n");
+	printf("pa\n");
 }
 
 void	pb(t_listpush **b, t_listpush **a)
 {
 	p_stk(a, b);
-	printf("PB\n");
+	printf("pb\n");
 }
 
 void	p_stk(t_listpush **a, t_listpush **b)
@@ -34,6 +34,7 @@ void	p_stk(t_listpush **a, t_listpush **b)
 		*b = (t_listpush *)malloc(sizeof(t_listpush));
 		(*b)->previous = NULL;
 		(*b)->value = (*a)->value;
+		(*b)->index = (*a)->index;
 		(*b)->previous = NULL;
 		(*a) = (*a)->next;
 		(*a)->previous = NULL;
@@ -44,9 +45,10 @@ void	p_stk(t_listpush **a, t_listpush **b)
 		{
 			tmp = (t_listpush *)malloc(sizeof(t_listpush));
 			tmp->value = (*a)->value;
+			tmp->index = (*a)->index;
 			tmp->next = NULL;
 			tmp->previous = NULL;
-			insert_node_first(b, tmp->value);
+			insert_node_first(b, tmp);
 			(*a) = (*a)->next;
 		}
 	}

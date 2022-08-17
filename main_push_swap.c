@@ -6,7 +6,7 @@
 /*   By: jmoyano- <jmoyano-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 19:53:03 by jmoyano-          #+#    #+#             */
-/*   Updated: 2022/08/10 11:30:18 by jmoyano-         ###   ########.fr       */
+/*   Updated: 2022/08/17 19:08:45 by jmoyano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(int argc, char **argv)
 	head = NULL;
 	a = NULL;
 	b = NULL;
-	push_swap(argc, argv, &a, &b);
+	if(argc >= 2 )
+		push_swap(argc, argv, &a, &b);
 	return (0);
 }
